@@ -8,7 +8,7 @@ After finishing this plugin example, you can use this plugin like this:
 
 ```javascript
 steamer example -c config.js
-// 或
+// or
 steamer example --config config.js
 ```
 
@@ -26,7 +26,7 @@ When user inputs the plugin command, the arguments are passed to this function.
 
 For more information of the arguments，please visit [yargs](https://github.com/yargs/yargs).
 
-* `init` 函数
+* `init` method
 
 Create a `init` method for this plugin, the method will be called when the command works.
 
