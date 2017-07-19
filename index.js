@@ -2,24 +2,24 @@
 
 const pluginutils = require('steamer-pluginutils');
 
-function ExamplePlugin(argv) {
+function MockPlugin(argv) {
 	this.argv = argv;
 	this.utils = new pluginutils("steamer-plugin-example");
 }
 
-ExamplePlugin.prototype.init = function() {
+MockPlugin.prototype.init = function() {
 	console.log(this.argv);
 };
 
-ExamplePlugin.prototype.help = function() {
-	this.utils.printUsage('steamer plugin example', 'example');
+MockPlugin.prototype.help = function() {
+	this.utils.printUsage('steamer plugin mock', 'mock');
 	this.utils.printOption([
 		{
-			option: "list",
-			alias: "l",
-			description: "list examples"
+			option: "db",
+			alias: "d",
+			description: "The mock data file path"
 		},
 	]);
 };
 
-module.exports = ExamplePlugin;
+module.exports = MockPlugin;
